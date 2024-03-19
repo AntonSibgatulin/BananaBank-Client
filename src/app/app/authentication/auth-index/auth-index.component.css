@@ -1,0 +1,27 @@
+.body {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 120px);
+  left: 0px;
+  top: 65px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.form-auth {
+  width: 520px;
+  height: 630px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  padding: 20px;
+  background-image: url("https://i.pinimg.com/originals/58/2e/65/582e6581f45ccac1dcc7cf271e4e88ec.png"), url("https://static.vecteezy.com/system/resources/previews/009/972/670/non_2x/banana-icon-banana-sign-symbol-free-png.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 265px -50px, -2px 575px;
+  background-size: contain, 25%;
+  transform: rotateZ(1deg);
+}

@@ -1,0 +1,39 @@
+.button-keep {
+  user-select: none;
+  width: 140px;
+  height: 48px;
+  border: 1px solid orange;
+  border-radius: 10px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-right: 6px;
+}
+
+.button-keep .text {
+  margin-left: 6px;
+  font-size: 16px;
+}
+
+.button-keep:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.button-keep .image {
+  width: 28px;
+  height: 28px;
+  background-image: url("https://uxwing.com/wp-content/themes/uxwing/download/fruits-vegetables/banana-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin-left: 6px;
+}
+
+.button-keep .image:first-child {
+  margin-left: 0px;
+}

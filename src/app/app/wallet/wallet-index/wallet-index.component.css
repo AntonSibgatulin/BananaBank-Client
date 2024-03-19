@@ -1,0 +1,42 @@
+.top-panel {
+  width: calc(100% - 150px);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 64px;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  padding-left: 150px;
+}
+
+.item-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 100px;
+  height: 100%;
+  font-size: 17px;
+  cursor: pointer;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  user-select: none;
+}
+
+.item-panel:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  text-decoration: underline;
+}
+
+.panel {
+  width: calc(100% - 400px);
+  height: 64px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}

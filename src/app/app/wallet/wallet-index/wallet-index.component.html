@@ -1,0 +1,26 @@
+<div class="top-panel">
+
+  <app-logotype (click)="navigateIndex()"></app-logotype>
+
+  <div class="panel">
+    <div class="item-panel" (click)="navigateTransfer()">
+      Transfer
+    </div>
+
+
+    <div class="item-panel" style="width: 180px" (click)="navigateHistory()">
+      History transfery
+    </div>
+
+
+    <div class="item-panel" (click)="navigateSettings()">
+      Settings
+    </div>
+
+    <app-button-accept (click)="navigateAccount()" text="Account" style="padding-left: 30px; padding-right: 30px"></app-button-accept>
+  </div>
+</div>
+
+<div style="margin-top: 84px;display: flex;justify-content: center">
+  <router-outlet></router-outlet>
+</div>

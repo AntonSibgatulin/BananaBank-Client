@@ -1,0 +1,47 @@
+.item-column {
+  width: 50%;
+  min-height: 300px;
+
+}
+
+.item-column:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.21);
+}
+
+.item-column:last-child {
+  margin-left: -1px;
+  border-left: 1px solid rgba(0, 0, 0, 0.21);
+
+}
+
+.item-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.item-data .data {
+  margin-left: 20px;
+  font-size: 22px;
+}
+
+
+.card {
+  margin-top: 5px;
+}
+
+.some-card {
+  width: 150px;
+  height: 80px;
+  background-image: url("https://static-00.iconduck.com/assets.00/credit-card-illustration-512x374-3zgafmuw.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card-data {
+  margin-top: 10px;
+  font-size: 12px;
+}

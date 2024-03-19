@@ -1,0 +1,28 @@
+
+.logotype {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 195px;
+  height: 64px;
+  padding-left: 40px;
+  padding-right: 0px;
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.logotype:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.logotype img {
+  width: 60px;
+  height: 60px;
+}
+
+.logotype .name {
+  margin-left: 10px;
+  font-size: 20px;
+}
+

@@ -1,0 +1,34 @@
+.container {
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "singUpWindow infoBananaBank"
+    "allInformation allInformation";
+  margin-top: 80px;
+  max-width: 1355px;
+}
+
+.singUpWindow {
+  grid-area: singUpWindow;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.infoBananaBank {
+  grid-area: infoBananaBank;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allInformation {
+  grid-area: allInformation;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

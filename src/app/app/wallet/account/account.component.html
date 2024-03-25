@@ -5,17 +5,17 @@
 
       </div>
       <div class="card-data">
-        +7 (999) 999-99-99
+        {{me.phones[0].phone}}
       </div>
     </div>
     <div>
       <div class="hello">
-        <b>Good day</b>, Anton Sibgatulin, your balance <b>20.000$</b>
+        <b>Good day</b>, {{getName()}}, your balance <b>{{me.wallet.balance}}$</b>
       </div>
       <div class="container-left" style="margin-top: 10px;height: auto">
         <app-button-accept text="Replenish"></app-button-accept>
         <app-button-accept (click)="navigateTransfer()" style="margin-left: 10px" text="Transfer"></app-button-accept>
-        <app-button-keep style="margin-left: 10px" text="Log out"></app-button-keep>
+        <app-button-keep (click)="logout()" style="margin-left: 10px" text="Log out"></app-button-keep>
       </div>
     </div>
 
@@ -27,71 +27,38 @@
 
     <div class="item-column">
 
-      <div class="item-data">
-        <app-button-delete></app-button-delete>
-        <div class="data">
-          7 (999) 999-99-99
+      <ng-container *ngFor="let item of me.phones">
+        <div class="item-data">
+          <app-button-delete (click)="deletePhone(item.id)"></app-button-delete>
+          <div class="data">
+            {{item.phone}}
+          </div>
         </div>
-      </div>
-
-      <div class="item-data">
-        <app-button-delete></app-button-delete>
-        <div class="data">
-          7 (999) 999-99-99
-        </div>
-      </div>
-
-      <div class="item-data">
-        <app-button-delete></app-button-delete>
-        <div class="data">
-          7 (999) 999-99-99
-        </div>
-      </div>
+      </ng-container>
 
 
       <div class="item-data">
-        <input type="text" placeholder="Add phone number" name="email" style="margin-left: 10px;height: 40px">
-        <app-button-add style="margin-left: 10px"></app-button-add>
+        <input type="text" placeholder="Add phone number" name="phone" style="margin-left: 10px;height: 40px">
+        <app-button-add (click)="addPhone()" style="margin-left: 10px"></app-button-add>
       </div>
     </div>
 
 
     <div class="item-column" style="">
 
-      <div class="item-data">
-        <app-button-delete style="margin-left: 10px"></app-button-delete>
-        <div class="data">
-          test&#64;mail.ru
+      <ng-container *ngFor="let item of me.emails">
+        <div class="item-data">
+          <app-button-delete (click)="deleteEmail(item.id)" style="margin-left: 10px"></app-button-delete>
+          <div class="data">
+            {{item.email}}
+          </div>
         </div>
-      </div>
-
-      <div class="item-data">
-        <app-button-delete style="margin-left: 10px"></app-button-delete>
-        <div class="data">
-          test&#64;mail.ru
-        </div>
-      </div>
-
-
-      <div class="item-data">
-        <app-button-delete style="margin-left: 10px"></app-button-delete>
-        <div class="data">
-          test&#64;mail.ru
-        </div>
-      </div>
-
-
-      <div class="item-data">
-        <app-button-delete style="margin-left: 10px"></app-button-delete>
-        <div class="data">
-          test&#64;mail.ru
-        </div>
-      </div>
+      </ng-container>
 
 
       <div class="item-data">
         <input type="text" placeholder="Add email" name="email" style="margin-left: 10px;height: 40px">
-        <app-button-add style="margin-left: 10px"></app-button-add>
+        <app-button-add (click)="addEmail()" style="margin-left: 10px"></app-button-add>
       </div>
 
 

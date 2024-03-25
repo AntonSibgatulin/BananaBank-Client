@@ -4,12 +4,8 @@
     History <b>transfer</b>
   </div>
 
-  <app-transfer-item phone="79999999999" type="add" status="PENDING" amount="20"></app-transfer-item>
-  <app-transfer-item phone="79999999999" type="add" status="PENDING" amount="20"></app-transfer-item>
-  <app-transfer-item phone="79999999999" type="add" status="PENDING" amount="20"></app-transfer-item>
-  <app-transfer-item phone="79999999999" type="add" status="PENDING" amount="20"></app-transfer-item>
-  <app-transfer-item phone="79999999999" type="add" status="PENDING" amount="20"></app-transfer-item>
-  <app-transfer-item phone="79999999999" type="add" status="PENDING" amount="20"></app-transfer-item>
-  <app-transfer-item phone="79999999999" type="add" status="PENDING" amount="20"></app-transfer-item>
-
+  <ng-container *ngFor="let item of transactions">
+    <app-transfer-item phone="{{getNumberItem(item)}}" type="{{getType(item)}}" status="{{item.status}}"
+                       amount="{{item.amount}}" time="{{item.transaction_time}}"></app-transfer-item>
+  </ng-container>
 </div>

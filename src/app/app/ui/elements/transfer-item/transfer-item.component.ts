@@ -16,6 +16,8 @@ export class TransferItemComponent {
   @Input() amount: any
   @Input() type: any
   @Input() status: any
+  @Input() time: any
+
 
   getAmount() {
     if (this.type.toLowerCase() == "ADD".toLowerCase()) {
@@ -25,4 +27,7 @@ export class TransferItemComponent {
     }
   }
 
+  getTime(time: any) {
+    return new Date(Number(time))
+  }
 }

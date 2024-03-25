@@ -3,7 +3,7 @@
   <div class="container-label" style="justify-content: start">
 
     <div class="hello">
-      <b>Good day</b>, Anton Sibgatulin, your balance <b>20.000$</b>
+      <b>Good day</b>, {{getLogin()}}, your balance <b>{{this.me.wallet.balance}}$</b>
     </div>
 
   </div>
@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="container-label">
-    <input type="text" name="firstname">
+    <input type="text" name="firstname" value="{{getName()}}">
   </div>
 
 
@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="container-label">
-    <input type="text" name="lastname">
+    <input type="text" name="lastname" value="{{getLastName()}}">
   </div>
 
 
@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="container-label">
-    <input type="text" name="secondname">
+    <input type="text" name="secondname" value="{{getSecondName()}}">
   </div>
 
 
@@ -44,11 +44,11 @@
     </div>
   </div>
   <div class="container-label">
-    <input type="date" name="birthDay">
+    <input type="date" name="birthDay" value="{{getDate()}}">
   </div>
 
   <div class="container-label" style="justify-content: end;margin-top: 40px;width: 91%">
-    <app-button-accept text="Send"></app-button-accept>
+    <app-button-accept (click)="update()" text="Send"></app-button-accept>
   </div>
 
 

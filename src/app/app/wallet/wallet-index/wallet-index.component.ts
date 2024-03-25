@@ -1,7 +1,8 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ButtonAcceptComponent} from "../../ui/elements/button-accept/button-accept.component";
 import {LogotypeComponent} from "../../ui/elements/logotype/logotype.component";
 import {Router, RouterOutlet} from "@angular/router";
+import {TokenService} from "../../../service/token.service";
 
 @Component({
   selector: 'app-wallet-index',
@@ -15,6 +16,7 @@ import {Router, RouterOutlet} from "@angular/router";
   styleUrl: './wallet-index.component.css'
 })
 export class WalletIndexComponent {
+
 
   constructor(private router: Router) {
   }
@@ -38,4 +40,6 @@ export class WalletIndexComponent {
   navigateIndex() {
     this.router.navigate(['/'])
   }
+
+
 }

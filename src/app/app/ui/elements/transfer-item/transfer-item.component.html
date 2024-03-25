@@ -2,5 +2,7 @@
   <app-button-s></app-button-s>
   <div class="phone">{{phone}}</div>
   <div [classList]="type=='add'?'amount add':'amount remove'"><b>{{getAmount()}}</b></div>
-  <div [classList]="status=='FAIL'?'amount remove':status=='SUCC'?'amount add':'amount pending'"><b>{{status}}</b></div>
+  <div [classList]="status=='FAIL'?'amount remove':status=='COMPLETED'?'amount add':'amount pending'">
+    <b>{{status}}</b></div>
+  <br/><div> {{getTime(time)}}</div>
 </div>

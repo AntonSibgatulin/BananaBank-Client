@@ -9,6 +9,7 @@ import {WalletTransferComponent} from "./app/wallet/wallet-transfer/wallet-trans
 import {WalletHistoryComponent} from "./app/wallet/wallet-history/wallet-history.component";
 import {SettingsComponent} from "./app/wallet/settings/settings.component";
 import {AccountComponent} from "./app/wallet/account/account.component";
+import {AuthGuard} from "./interceptor/auth.guard";
 
 export const routes: Routes = [
   {
@@ -25,7 +26,7 @@ export const routes: Routes = [
     ]
   },
   {
-    path: "wallet", component: WalletIndexComponent, children: [
+    path: "wallet", component: WalletIndexComponent, canActivate:[AuthGuard], children: [
       {
         path: "transfer", component: WalletTransferComponent
       },
